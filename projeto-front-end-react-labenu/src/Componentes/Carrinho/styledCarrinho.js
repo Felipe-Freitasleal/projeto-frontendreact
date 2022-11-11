@@ -12,6 +12,10 @@ export const Div = styled.div`
 
 export const Section = styled.section`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    >button{
+        max-width: 100px;
+    }
 `

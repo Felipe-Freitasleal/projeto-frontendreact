@@ -2,19 +2,20 @@ import React from "react"
 import {Div} from "./styledProduto"
 
 function Produto (props) {
+    const { produto, onClickAdd } = props
 
     return(
         <Div>
                <span>
-                <img src={props.foto} alt="foto do produto"/>
+                <img src={produto.imageUrl} alt="foto do produto"/>
                </span>
                <p>
-                {props.nome}
+                {produto.name}
                </p>
                <p>
-                Valor: R${props.preco}
+                Valor: R${produto.value}
                </p>
-               <button>
+               <button onClick={() => onClickAdd(produto)}>
                 Adicionar ao carrinho
                </button>
         </Div>
