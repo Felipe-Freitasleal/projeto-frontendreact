@@ -4,6 +4,7 @@ import {Div} from "./styledFiltros"
 
 function Filtros (props) {
     const {
+
         onChangeMinimo, 
         onChangeMaximo, 
         onChangeNome, 
@@ -52,6 +53,7 @@ function Filtros (props) {
                     <input 
                         placeholder="Digite o nome do produto" 
                         type="text" 
+                        value={guardaNome}
                         onChange={onChangeNome}/>
                 </label>
 

@@ -22,30 +22,52 @@ function App() {
     setGuardaNome("")
   };
 
+  const onClickLimpaCarrinho = () => {setCarrinho([])};
+
+  const onClickRemoveItem = (produtoRemover) => {
+    const novoCarrinho = [... carrinho]
+
+    if(produtoRemover.quantidade > 1){
+      produtoRemover.quantidade--
+     
+    } else {
+      //se entrar aqui, é pq a quantidade é 1, e ele tem de deixar de existir. 
+      // const acharIndex = novoCarrinho.findIndex(item,)
+    }
+
+    return setCarrinho(novoCarrinho)
+  };
+
+  const onClickAddMais1 = (produtoMais1) => {
+    const novoCarrinho = [... carrinho]
+    produtoMais1.quantidade = produtoMais1.quantidade +1
+    setCarrinho(novoCarrinho)
+  }
+
   const onClickAdd = (produtoClicado) => {
     //Copia o array de produtos que vão para o carrinho. Em seu estado original ele está vazio, será preenchido por cada produto novo que for clicado para ser adicionado.
-    const novoItem = [... carrinho]
+    const nocoCarrinho = [... carrinho]
 
     //Compara o id ro produto clicado com cada produto da lista copiada de produtos. Se não achar nenhum id igual adiciona o produto. Se achar, só adiciona + 1 a quantidade.
-    const compararItens = novoItem.find((produto) => produto.id === produtoClicado.id)
+    const compararItens = nocoCarrinho.find((produto) => produto.id === produtoClicado.id)
     console.log(compararItens)
-    //O .find() retorn true se algum item do array comparado for igual. Nesse caso aqui, se o id de algum item for igual, ele retornario "true", se não, ele retorna "undefined" que tem valor de "false".
+    //O .find() retorn o item achado quando comparado e achar um igual. Nesse caso aqui, se o id de algum item for igual, ele retornario o item, se não, ele retorna "undefined" que tem valor de "false".
 
     //Se o valor retornado pelo .find feito no compararItens for false, ele adiciona a propriedade "quantidade" com valor 1 e adiciona ao array que vai ser exibino no carrinho. Se for "true", então esse item já existe no carrinho e só é adicionado + 1 em quantidade. 
     if(!compararItens){
       const produtoClicadoQuantidade = {... produtoClicado, quantidade: 1}
-      novoItem.push(produtoClicadoQuantidade)
+      nocoCarrinho.push(produtoClicadoQuantidade)
     } else {
-      // const acherIndexObjeto = novoItem.findIndex((produto) => produto.id === produtoClicado.id)
-      // const alterarListaCarrinho = novoItem.splice(acherIndexObjeto, 1, produtoClicado.quantidade = produtoClicado.quantidade + 1)
-      compararItens.quantidade++
+      // const acherIndexObjeto = nocoCarrinho.findIndex((produto) => produto.id === produtoClicado.id)
+      // const alterarListaCarrinho = nocoCarrinho.splice(acherIndexObjeto, 1, produtoClicado.quantidade = produtoClicado.quantidade + 1)
+      compararItens.quantidade = compararItens.quantidade +1
     }
 
-    setCarrinho(novoItem)
+    setCarrinho(nocoCarrinho)
   };
 
   const total = carrinho.reduce(
-    (acc, product) => product.value * product.quantidade + acc,
+    (acc, produto) => produto.value * produto.quantidade + acc,
     0
   )
 
@@ -94,6 +116,9 @@ function App() {
           <Carrinho
             carrinho={carrinho}
             total={total}
+            onClickLimpaCarrinho={onClickLimpaCarrinho}
+            onClickRemoveItem={onClickRemoveItem}
+            onClickAddMais1={onClickAddMais1}
           />
         </Aside>
       </Div>
