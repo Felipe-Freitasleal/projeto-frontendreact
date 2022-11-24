@@ -27,12 +27,15 @@ function App() {
   const onClickRemoveItem = (produtoRemover) => {
     const novoCarrinho = [... carrinho]
 
-    if(produtoRemover.quantidade > 1){
+
+    if(produtoRemover.quantidade > 0 ){
       produtoRemover.quantidade--
-     
-    } else {
+    } 
+    if(produtoRemover.quantidade === 0 ) {
       //se entrar aqui, é pq a quantidade é 1, e ele tem de deixar de existir. 
-      // const acharIndex = novoCarrinho.findIndex(item,)
+      const index = novoCarrinho.indexOf(produtoRemover)
+      console.log(index)
+      novoCarrinho.splice(index, 1)
     }
 
     return setCarrinho(novoCarrinho)
@@ -48,7 +51,7 @@ function App() {
     //Copia o array de produtos que vão para o carrinho. Em seu estado original ele está vazio, será preenchido por cada produto novo que for clicado para ser adicionado.
     const nocoCarrinho = [... carrinho]
 
-    //Compara o id ro produto clicado com cada produto da lista copiada de produtos. Se não achar nenhum id igual adiciona o produto. Se achar, só adiciona + 1 a quantidade.
+    //Compara o id do produto clicado com cada produto da copiada da lista de produtos. Se não achar nenhum id igual adiciona o produto. Se achar, só adiciona + 1 a quantidade.
     const compararItens = nocoCarrinho.find((produto) => produto.id === produtoClicado.id)
     console.log(compararItens)
     //O .find() retorn o item achado quando comparado e achar um igual. Nesse caso aqui, se o id de algum item for igual, ele retornario o item, se não, ele retorna "undefined" que tem valor de "false".
