@@ -17,6 +17,7 @@ export const Div = styled.div`
   width: auto;
   height: auto;
   padding: 10px;
+  background-color: grey;
 `
 export const H1 = styled.h1`
   display: flex;

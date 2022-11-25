@@ -2,16 +2,17 @@ import Carrinho from "./Componentes/Carrinho/Carrinho"
 import Filtros from "./Componentes/Filtros/Filtros"
 import Produto from "./Componentes/Produto/Produto"
 import ListaProdutos from "./Componentes/ListaProdutos/ListaProdutos.json"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {GlobalStyle, Div, H1, Section, Aside} from "./styledApp"
 
 
 function App() {
 
-  const [ varloMinimo, setValorminimo ] = useState(0);
+  const [ valorMinimo, setValorminimo ] = useState(0);
   const [ valorMaximo, setValorMaximo ] = useState(100000000000);
   const [ guardaNome, setGuardaNome ] = useState("");
-  const [ carrinho, setCarrinho] = useState([]);
+  const [ carrinho, setCarrinho ] = useState([]);
+  const [ ordenar , setOrdenar ] = useState("")
 
   const onChangeMinimo = (e) => {setValorminimo(e.target.value)};
   const onChangeMaximo = (e) => {setValorMaximo(e.target.value)};
@@ -20,22 +21,55 @@ function App() {
     setValorminimo(0)
     setValorMaximo(100000000000)
     setGuardaNome("")
+
+    localStorage.setItem("valor mínimo", 0)
+    localStorage.setItem("valor máximo", 100000000000)
+    localStorage.setItem("nome", "")
   };
 
-  const onClickLimpaCarrinho = () => {setCarrinho([])};
+  useEffect(() => {
+    if(carrinho.length > 0 || valorMinimo > 19 || valorMaximo < 100000000000 || guardaNome){
+      localStorage.setItem("valor mínimo", valorMinimo)
+      localStorage.setItem("valor máximo", valorMaximo)
+      localStorage.setItem("nome", guardaNome)
+  
+      const transformaCarrinhoString = JSON.stringify(carrinho)
+      localStorage.setItem("carrinho", transformaCarrinhoString)
+    }
+  }, [valorMinimo, valorMaximo, guardaNome, carrinho])
+
+  useEffect(() => {
+    const trazerValorMinimo = localStorage.getItem("valor mínimo")
+    setValorminimo(Number(trazerValorMinimo))
+
+    const trazerValorMaximo = localStorage.getItem("valor máximo")
+    setValorMaximo(Number(trazerValorMaximo))
+
+    const trazerNome = localStorage.getItem("nome")
+    setGuardaNome(trazerNome)
+
+    const trazerCarrinho = localStorage.getItem("carrinho")
+    if(trazerCarrinho){
+      const transformaCarrinhoObjeto = JSON.parse(trazerCarrinho)
+      setCarrinho(transformaCarrinhoObjeto)
+    }
+  }, [])
+
+  const onClickLimpaCarrinho = () => {
+    localStorage.setItem("carrinho", "")
+    setCarrinho([])};
 
   const onClickRemoveItem = (produtoRemover) => {
     const novoCarrinho = [... carrinho]
-
 
     if(produtoRemover.quantidade > 0 ){
       produtoRemover.quantidade--
     } 
     if(produtoRemover.quantidade === 0 ) {
-      //se entrar aqui, é pq a quantidade é 1, e ele tem de deixar de existir. 
-      const index = novoCarrinho.indexOf(produtoRemover)
+      //se entrar aqui, é pq a quantidade é menor que 1, e ele tem de deixar de existir. 
+      const index = novoCarrinho.indexOf(produtoRemover) // achar o índice do ítem a ser removido
       console.log(index)
-      novoCarrinho.splice(index, 1)
+      novoCarrinho.splice(index, 1) //remove o ítem em que o índice foi achado com o método indexOf()
     }
 
     return setCarrinho(novoCarrinho)
@@ -85,15 +119,16 @@ function App() {
             onChangeMaximo={onChangeMaximo}
             onChangeNome={onChangeNome}
             onClickClear={onClickClear}
-            varloMinimo={varloMinimo}
+            valorMinimo={valorMinimo}
             valorMaximo={valorMaximo}
             guardaNome={guardaNome}
+            setOrdenar={setOrdenar}
           />
         </Aside>
         <Section>
           {ListaProdutos
           .filter((produto) => {
-            return produto.value > varloMinimo 
+            return produto.value > valorMinimo 
           }  
           )
           .filter((produto) => { 
@@ -102,6 +137,13 @@ function App() {
           )
           .filter((produto) => {
             return produto.name.toLocaleLowerCase().includes(guardaNome.toLocaleLowerCase())
+          })
+          .sort((atual, seguinte) => {
+            if(ordenar === "crescente"){
+              return atual.name < seguinte.name? -1 :1
+            } else if( ordenar === "decrescente") {
+              return atual.name > seguinte.name ? -1 : 1
+            }
           })
           .map((produto)=>{
             return(

@@ -10,7 +10,7 @@ function Carrinho (props) {
         onClickRemoveItem,
         onClickAddMais1
     } = props
-    console.log(carrinho)
+
 
     return(
         <Div>
