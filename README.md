@@ -1,6 +1,6 @@
-:waxing_crescent_moon::milky_way: *Lojinha de itens espaciais.* :moon::sun_with_face:
+:waxing_crescent_moon::milky_way: **Lojinha de itens espaciais.** :moon::sun_with_face:
 
-*PROJETO feito como atividade avaliativa para o Front-End do Bootcamp da Labenu*, onde o aluno deve desenvolver, usando o React, um e-commerce de artigos espaciais seguindo os requisitos apresentados abaixo.
+**PROJETO feito como atividade avaliativa para o Front-End do Bootcamp da Labenu**, onde o aluno deve desenvolver, usando o React, um e-commerce de artigos espaciais seguindo os requisitos apresentados abaixo.
 
 
 # projeto-frontendreact
