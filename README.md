@@ -1,3 +1,8 @@
+:waxing_crescent_moon::milky_way: **Lojinha de itens espaciais.** :moon::sun_with_face:
+
+**PROJETO feito como atividade avaliativa para o Front-End do Bootcamp da Labenu**, onde o aluno deve desenvolver, usando o React, um e-commerce de artigos espaciais seguindo os requisitos apresentados abaixo.
+
+
 # projeto-frontendreact
 
 Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce
@@ -67,22 +72,22 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
 
 ### Lista de Requisitos
 - Home (Lista de Produtos)
-    - [ ]  O usuário deve ser capaz de visualizar uma lista de produtos
-    - [ ]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
-    - [ ]  O usuário deve ser capaz de adicionar um produto no carrinho
+    - [ v]  O usuário deve ser capaz de visualizar uma lista de produtos
+    - [ v]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
+    - [ v]  O usuário deve ser capaz de adicionar um produto no carrinho
 - Carrinho
-    - [ ]  O usuário deve ser capaz de visualizar os produtos adicionados
-    - [ ]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
-    - [ ]  O usuário deve ser capaz de remover itens do carrinho
-    - [ ]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
-    - [ ]  Quando a página é atualizada, os itens devem continuar no carrinho
+    - [v ]  O usuário deve ser capaz de visualizar os produtos adicionados
+    - [v ]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
+    - [ v]  O usuário deve ser capaz de remover itens do carrinho
+    - [ v]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
+    - [v ]  Quando a página é atualizada, os itens devem continuar no carrinho
 - Filtros e Ordenação
-    - [ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
-    - [ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
-    - [ ]  O usuário deve ser capaz de realizar uma busca por nome
-    - [ ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
-    - [ ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
-    - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
+    - [ v]  O usuário deve ser capaz de filtrar os itens por preço mínimo
+    - [v ]  O usuário deve ser capaz de filtrar os itens por preço máximo
+    - [v ]  O usuário deve ser capaz de realizar uma busca por nome
+    - [v ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
+    - [v ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
+    - [v ]  O usuário deve ser capaz de retornar à visualização sem filtros
     
  ### 
 
@@ -117,4 +122,3 @@ https://user-images.githubusercontent.com/11279432/197185533-14582ca3-9eb0-4a5a-
     </details>
 - Entregue o **link do repo** no [Formulário de entrega](https://forms.gle/S9XChPZravP3WdxL6) 
 - Utilize o **surge** para fazer o deploy do seu projeto.
-

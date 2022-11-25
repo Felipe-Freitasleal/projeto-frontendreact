@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Foguete da Missão Apollo 11",
+        "value": 120000.0,
+        "imageUrl": "https://picsum.photos/200/200"
+    },
+    {
+        "id": 2,
+        "name": "Camisa da Nasa",
+        "value": 25.99,
+        "imageUrl": "https://picsum.photos/200/200"
+    },
+    {
+        "id": 3,
+        "name": "Satélite Antigo",
+        "value": 5000.0,
+        "imageUrl": "https://picsum.photos/200/200"
+    },
+    {
+        "id": 4,
+        "name": "Roupa Espacial",
+        "value": 1000.0,
+        "imageUrl": "https://picsum.photos/200/200"
+    },
+    {
+        "id": 5,
+        "name": "Viagem Espacial",
+        "value": 2000.0,
+        "imageUrl": "https://picsum.photos/200/200"
+    },
+    {
+        "id": 6,
+        "name": "Foguete de Brinquedo",
+        "value": 99.99,
+        "imageUrl": "https://picsum.photos/200/200"
+    },
+    {
+        "id": 7,
+        "name": "Ônibus Espacial",
+        "value": 12000.0,
+        "imageUrl": "https://picsum.photos/200/200"
+    }
+]
