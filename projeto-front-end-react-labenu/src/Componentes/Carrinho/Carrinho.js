@@ -26,7 +26,9 @@ function Carrinho (props) {
                            <span >
                                R$ {item.value}
                            </span>
-                           <span>Quantidade: {item.quantidade}</span>
+                           <span>
+                                Quantidade: {item.quantidade}
+                            </span>
                            <button onClick={() => onClickRemoveItem(item)}>Remover</button>
                            <button onClick={() => onClickAddMais1(item)}>Adicionar</button>
                        </Section>            

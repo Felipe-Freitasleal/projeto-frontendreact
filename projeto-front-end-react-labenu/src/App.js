@@ -2,8 +2,9 @@ import Carrinho from "./Componentes/Carrinho/Carrinho"
 import Filtros from "./Componentes/Filtros/Filtros"
 import Produto from "./Componentes/Produto/Produto"
 import ListaProdutos from "./Componentes/ListaProdutos/ListaProdutos.json"
+import Footer from "./Componentes/Footer/Footer"
 import { useEffect, useState } from "react";
-import {GlobalStyle, Div, H1, Section, Aside} from "./styledApp"
+import {GlobalStyle, Div, Header, Section, Aside, Nav} from "./styledApp"
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
 
   useEffect(() => {
     const trazerValorMinimo = localStorage.getItem("valor mínimo")
-    setValorminimo(Number(trazerValorMinimo))
+    setValorminimo(trazerValorMinimo)
 
     const trazerValorMaximo = localStorage.getItem("valor máximo")
     setValorMaximo(Number(trazerValorMaximo))
@@ -111,9 +112,10 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <H1>Loja Espacial</H1>
-      <Div>
-        <Aside>
+      <Header>
+        <h1>Loja Espacial</h1>
+      </Header>
+        <Nav>
           <Filtros
             onChangeMinimo={onChangeMinimo}
             onChangeMaximo={onChangeMaximo}
@@ -124,7 +126,8 @@ function App() {
             guardaNome={guardaNome}
             setOrdenar={setOrdenar}
           />
-        </Aside>
+        </Nav>
+      <Div>
         <Section>
           {ListaProdutos
           .filter((produto) => {
@@ -166,7 +169,9 @@ function App() {
             onClickAddMais1={onClickAddMais1}
           />
         </Aside>
+
       </Div>
+      <Footer/>
     </>
   );
 }
