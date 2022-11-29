@@ -5,8 +5,8 @@ export const Div = styled.div`
     border: 4px solid black;
     border-radius: 10px;
     width: 22vw;
-    height: 77vh;
-    max-height: 77vh;
+    height: 65vh;
+    max-height: 66vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

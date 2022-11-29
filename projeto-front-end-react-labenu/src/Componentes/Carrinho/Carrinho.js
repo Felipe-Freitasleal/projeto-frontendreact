@@ -11,12 +11,17 @@ function Carrinho (props) {
         onClickAddMais1
     } = props
 
+    const quantidadeItens = carrinho.reduce(
+        (acc, produto) => produto.quantidade + acc,
+        0
+    )
 
     return(
         <Div>
             <h2>Carrinho:</h2>
                 {carrinho.length > 0 ? (
                 <>
+                    <p>Quantidade de intens: {quantidadeItens}</p>
                     {carrinho.map((item) => (
                        
                        <Section key={item.id}>
