@@ -18,10 +18,10 @@ function Carrinho (props) {
 
     return(
         <Div>
-            <h2>Carrinho:</h2>
+            <h3>Carrinho Cósmico:</h3>
                 {carrinho.length > 0 ? (
                 <>
-                    <p>Quantidade de intens: {quantidadeItens}</p>
+                    <p>Quantidade de itens: {quantidadeItens}</p>
                     {carrinho.map((item) => (
                        
                        <Section key={item.id}>
@@ -39,7 +39,7 @@ function Carrinho (props) {
                        </Section>            
                     ))}  
                     <p>Valor total: R${total}</p> 
-                    <button onClick={onClickLimpaCarrinho}>Limpar carrinho</button>
+                    <button className="Limpar" onClick={onClickLimpaCarrinho}>Limpar carrinho</button>
                 </>   
                              
                 )

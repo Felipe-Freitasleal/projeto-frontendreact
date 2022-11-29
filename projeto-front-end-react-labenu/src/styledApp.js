@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import imagem from "./assets/pixel-great-stars-from-hubble_0.png"
+import imagem from "./assets/space-pixel-art.gif"
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -31,7 +31,7 @@ export const Header = styled.header`
   h1{
     background-image: url(${imagem});
     background-size: cover;
-    background-position: center;
+    background-position: top;
     -webkit-background-clip: text;
     text-transform: uppercase;
     font-weight: bold;

@@ -12,8 +12,25 @@ export const Div = styled.div`
     justify-content: space-between;
     overflow-y: scroll;
     padding: 2px;
-    color: aliceblue;
+    color: lightgray;
     background-image: url(${logo});
+
+    button{
+        border: transparent;
+        background-color: transparent;
+        box-shadow: -0.25px 0.15px 4px darkgray;
+        border-radius: 5px;
+        color: grey;
+        max-width: 150px;
+            :hover{
+            background-color: #eeeee4;
+            color: black;
+            }
+    }
+    .Limpar{
+        align-self: center;
+        border: 2px solid grey
+    }
 `
 
 export const Section = styled.section`
@@ -24,7 +41,4 @@ export const Section = styled.section`
     border-radius: 5px;
     margin: 2px;
     padding: 3px;
-    button{
-        max-width: 100px;
-    }
 `

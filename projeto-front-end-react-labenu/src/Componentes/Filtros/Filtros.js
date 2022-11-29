@@ -26,8 +26,9 @@ function Filtros(props) {
                     <option value={valorMinimo}>Selecione valor mínimo</option>
                     <option value="20">20</option>
                     <option value="100">100</option>
+                    <option value="1000">1000</option>
                     <option value="10000">10000</option>
-                    <option value="40000">40000</option>
+                    <option value="40000">50000</option>
                 </Select>
             </Label>
  
@@ -35,9 +36,9 @@ function Filtros(props) {
                 Buscar por valor máximo
                 <Select name="valor-maximo" id="valor-maximo" onChange={onChangeMaximo}>
                     <option value={valorMaximo}>Selecione valor máximo</option>
-                    <option value="1200001">1200001</option>
-                    <option value="50001">50001</option>
-                    <option value="20001">20001</option>
+                    <option value="1200000">120001</option>
+                    <option value="60000">60000</option>
+                    <option value="10000">10000</option>
                     <option value="1000">1000</option>
                     <option value="100">100</option>
                 </Select>
@@ -64,6 +65,7 @@ function Filtros(props) {
             <button onClick={onClickClear}>
                 Limpar Pesquisas
             </button>
+            
         </Div>
     )
 };
