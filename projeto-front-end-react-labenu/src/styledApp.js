@@ -25,7 +25,8 @@ export const Header = styled.header`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-height: 15vh;
+  height: 18vh;
+  background-image: linear-gradient(to top, white, #4c6c81, #083263, black);
 
   h1{
     background-image: url(${imagem});
@@ -45,8 +46,8 @@ export const Section = styled.section`
     flex-wrap: wrap;
     min-width: 77vw;
     max-width: 7vw;
-    min-height: 77vh;
-    max-height: 77vh;
+    min-height: 66vh;
+    max-height: 66vh;
     overflow-y: scroll;
 `
 export const Footer = styled.div`
