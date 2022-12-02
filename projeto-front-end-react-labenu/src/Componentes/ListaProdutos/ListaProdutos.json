@@ -3,42 +3,54 @@
         "id": 1,
         "name": "Foguete da Missão Apollo 11",
         "value": 120000.0,
-        "imageUrl": "https://picsum.photos/200/200"
+        "imageUrl": "https://img.olhardigital.com.br/uploads/acervo_imagens/2019/07/20190720023016.jpg"
     },
     {
         "id": 2,
         "name": "Camisa da Nasa",
         "value": 25.99,
-        "imageUrl": "https://picsum.photos/200/200"
+        "imageUrl": "https://images.tcdn.com.br/img/img_prod/779664/camiseta_nasa_1913_1_20201203210723.jpg"
     },
     {
         "id": 3,
         "name": "Satélite Antigo",
         "value": 5000.0,
-        "imageUrl": "https://picsum.photos/200/200"
+        "imageUrl": "https://scent.kisti.re.kr/uploadfile/ecms/media/2013/10/eadf904513efe4a56ec6a35f2c650e2a.bmp"
     },
     {
         "id": 4,
         "name": "Roupa Espacial",
         "value": 1000.0,
-        "imageUrl": "https://picsum.photos/200/200"
+        "imageUrl": "https://www.jornaljoca.com.br/wp-content/uploads/2015/02/astronauta-apollo11-bdb01.jpg"
     },
     {
         "id": 5,
         "name": "Viagem Espacial",
         "value": 2000.0,
-        "imageUrl": "https://picsum.photos/200/200"
+        "imageUrl": "https://www.elhombre.com.br/wp-content/uploads/2015/04/space-x-ael-hombre.jpg"
     },
     {
         "id": 6,
         "name": "Foguete de Brinquedo",
         "value": 199.99,
-        "imageUrl": "https://picsum.photos/200/200"
+        "imageUrl": "https://a-static.mlcdn.com.br/1500x1500/foguete-de-brinquedo-astronautas-exploradores-do-espaco-fun/magazineluiza/226746100/c12e51c59ba5af98cf23b27c6f9ea930.jpg"
     },
     {
         "id": 7,
         "name": "Ônibus Espacial",
         "value": 12000.0,
-        "imageUrl": "https://picsum.photos/200/200"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Space_Shuttle_Challenger_%2818649411714%29.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Meteorito",
+        "value": 2000.0,
+        "imageUrl": "https://static.mundoeducacao.uol.com.br/mundoeducacao/2022/01/meteorito.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Poeira Espacial",
+        "value": 1000.0,
+        "imageUrl": "https://midias.correiobraziliense.com.br/_midias/jpg/2022/07/12/james_webb_carina_nebulosa-26039414.jpg"
     }
 ]
