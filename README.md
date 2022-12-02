@@ -4,6 +4,7 @@
 
 Este projeto teve como inspiração de estilização pixel art e websites dos anos 90 e 2000.
 
+<img sr="/projeto-front-end-react-labenu/src/assets/logita.png" alt="Layout site">
 
 # projeto-frontendreact
 
