@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react";
-import { Div, Select, Label } from "./styledFiltros"
+import { Div, Select, Label, Input } from "./styledFiltros"
 
 function Filtros(props) {
     const {
@@ -46,7 +46,7 @@ function Filtros(props) {
   
             <Label htmlFor="nome-produto">
                 Buscar por nome
-                <input
+                <Input
                     placeholder="Digite o nome do produto"
                     type="text"
                     value={guardaNome}
