@@ -1,6 +1,7 @@
 :waxing_crescent_moon::milky_way: **Lojinha de itens espaciais.** :moon::sun_with_face:
 
 **PROJETO feito como atividade avaliativa para o Front-End React do Bootcamp da Labenu**, onde o aluno deve desenvolver um e-commerce de artigos espaciais seguindo os requisitos apresentados abaixo.
+
 Este projeto teve como inspiração de estilização pixel art e websites dos anos 90 e 2000.
 
 
