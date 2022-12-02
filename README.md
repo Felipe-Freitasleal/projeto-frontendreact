@@ -4,8 +4,7 @@
 
 Este projeto teve como inspiração de estilização pixel art e websites dos anos 90 e 2000.
 
-<img sr="/projeto-front-end-react-labenu/src/assets/lojita.png" alt="Layout site">
-![](/projeto-front-end-react-labenu/src/assets/lojita.png)
+![lojita](https://user-images.githubusercontent.com/111313686/205342857-9e909c98-c590-466e-a115-8efce7337735.png)
 
 # projeto-frontendreact
 
