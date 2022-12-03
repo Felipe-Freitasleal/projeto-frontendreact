@@ -47,19 +47,25 @@ function App() {
   }, [valorMinimo, valorMaximo, guardaNome, carrinho])
 
   useEffect(() => {
-    const trazerValorMinimo = localStorage.getItem("valor mínimo")
-    setValorminimo(trazerValorMinimo)
-
-    const trazerValorMaximo = localStorage.getItem("valor máximo")
-    setValorMaximo(Number(trazerValorMaximo))
-
-    const trazerNome = localStorage.getItem("nome")
-    setGuardaNome(trazerNome)
-
-    const trazerCarrinho = localStorage.getItem("carrinho")
-    if (trazerCarrinho) {
-      const transformaCarrinhoObjeto = JSON.parse(trazerCarrinho)
-      setCarrinho(transformaCarrinhoObjeto)
+    if(localStorage.length > 0){
+      const trazerValorMinimo = localStorage.getItem("valor mínimo")
+      console.log(trazerValorMinimo)
+      setValorminimo(trazerValorMinimo)
+  
+      const trazerValorMaximo = localStorage.getItem("valor máximo")
+      console.log(trazerValorMaximo)
+      setValorMaximo(Number(trazerValorMaximo))
+  
+      const trazerNome = localStorage.getItem("nome")
+      console.log(trazerNome)
+      setGuardaNome(trazerNome)
+  
+      const trazerCarrinho = localStorage.getItem("carrinho")
+      console.log(trazerCarrinho)
+      if (trazerCarrinho) {
+        const transformaCarrinhoObjeto = JSON.parse(trazerCarrinho)
+        setCarrinho(transformaCarrinhoObjeto)
+      }
     }
   }, [])
 
