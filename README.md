@@ -6,6 +6,8 @@ Este projeto teve como inspiração de estilização pixel art e websites dos an
 
 ![lojita](https://user-images.githubusercontent.com/111313686/205342857-9e909c98-c590-466e-a115-8efce7337735.png)
 
+https://lojita-cosmica.surge.sh/
+
 # projeto-frontendreact
 
 Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce
