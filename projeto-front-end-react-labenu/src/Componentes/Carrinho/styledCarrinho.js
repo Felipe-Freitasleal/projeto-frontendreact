@@ -44,7 +44,7 @@ export const Div = styled.div`
     }
 
     ::-webkit-scrollbar{
-      background-color: transparent;
+        background-color: transparent;
     }
     
     ::-webkit-scrollbar-thumb{
