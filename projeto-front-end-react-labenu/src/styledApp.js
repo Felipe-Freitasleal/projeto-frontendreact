@@ -54,7 +54,7 @@ export const Section = styled.section`
     max-width: 7vw;
     min-height: 66vh;
     max-height: 66vh;
-    overflow-y: overlay;
+    overflow-y: scroll;
 
     ::-webkit-scrollbar{
       background-color: transparent;
